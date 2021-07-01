@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arsenal&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+
+/* Шапка сайта */
+
+
+
+main {
+    margin-top: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Стили фото карусели */
+
+/* .widePic img {
+    height: 400px;
+    width: 600px;
+}
+
+.narrowPic img {
+    height: 400px;
+    width: 300px;
+}
+
+.widePic {
+    height: 400px;
+    width: 600px;
+}
+
+.narrowPic {
+    height: 400px;
+    width: 300px;
+} */
+
+#slides {
+    position: absolute;
+    left: 0;
+    display: flex;
+    overflow: scroll;
+}
+
+#slides img{
+    display: block;
+    float: left;
+    overflow: hidden;
+    height: 400px;
+    margin: 20px;
+}
+
+.currentSlide {
+    /* position: absolute; */
+    left: 35%;
+
+}
+
+.owl-carousel {
+    padding-top: 40px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+/* Стили знакомства с фотографом */
+
+#aboutMeContainer {
+    box-sizing: border-box;
+    text-align: center;
+    margin: 220px 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* justify-content: space-between; */
+    /* width: auto; */
+}
+
+#aboutMe {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    width: 90%;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25em;
+    padding: 0 2.5%;
+}
+
+#aboutMeContainer img {
+    width: 25%;
+    padding: 0 2.5%;
+    display: flex;
+
+}
+
+/* .fadeElem img{
+    height: 600px;
+} */
+
+.fadeElem {
+    padding-top: 40px;
+}
+
+/* Стили кнопок-ссылок */
+
+.aButton {
+    border: solid #000;
+    background-color: #000;
+    border-radius: 100px;
+    height: 54px;
+    width: 550px;
+    margin: 50px 0;
+}
+
+.aButton a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.aButton:hover {
+    opacity: 0.9;
+    transition: opacity 400ms;
+}
+
+a i{
+    padding: 0 8px;
+} 
+
+.labelContainer {
+    margin: 30px 0;
+}
+
+.label::after{
+    content: "•    •    •";
+}
+
+/* Стили блоков контента с фотографиями */
+h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #000;
+    opacity: 0.7;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+}
+
+.photoContainer {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photoBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.photoBlock img{
+    justify-content: center;
+    width: 20%;
+    padding: 10px;
+}
+
+/* Стили блока с инстаграм - фото */
+
+#instaBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#instaPhoto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#instaPhoto img {
+    z-index: 1;
+    width: 250px;
+    height: auto;
+    margin: 10px;
+}
+
+.sh_photo {
+    position: relative;
+}
+
+.sh_photo img {
+    z-index: 1;
+}
+
+.shadow {
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 10;
+
+}
+
+
+#instaText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    color: #000;
+    opacity: 0.7;
+}
+ 
+/* Стили нижнего колонтитула */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.footerLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerLinks img {
+    width: 35px;
+    height: 35px;
+    margin: 10px;
+}
+
+#pixelPerfect {
+    display: none;
+}
+
+#footerText {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1em;
+
+}
+
+#footerText p {
+    margin: 2px;
+}
+
