@@ -3,5 +3,5 @@
 
     for(let l of textWidth){
         let length = $(l).width();
-        console.log(length);
+        // console.log(length);
     }

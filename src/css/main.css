@@ -13,27 +13,28 @@ main {
     align-items: center;
 }
 
-/* Стили фото карусели */
-
-/* .widePic img {
-    height: 400px;
-    width: 600px;
+h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #000;
+    opacity: 0.7;
+    letter-spacing: 2px;
+    margin: 10px;   
 }
 
-.narrowPic img {
-    height: 400px;
-    width: 300px;
+h3 a {
+    text-decoration: none;
+    color: #000;
+    transition: 500ms;
 }
 
-.widePic {
-    height: 400px;
-    width: 600px;
+h3 a:hover {
+    color: #000;
+    letter-spacing: .05em;
+    transition: 500ms;
 }
 
-.narrowPic {
-    height: 400px;
-    width: 300px;
-} */
+
+/* Настройка плагина OWL-Carousel */
 
 #slides {
     position: absolute;
@@ -51,7 +52,6 @@ main {
 }
 
 .currentSlide {
-    /* position: absolute; */
     left: 35%;
 
 }
@@ -62,19 +62,17 @@ main {
     opacity: 0;
 }
 
+/* Настройка плагина OWL-Carousel (END)*/
 
 /* Стили знакомства с фотографом */
 
 #aboutMeContainer {
-    box-sizing: border-box;
     text-align: center;
     margin: 220px 80px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* justify-content: space-between; */
-    /* width: auto; */
 }
 
 #aboutMe {
@@ -86,7 +84,6 @@ main {
     text-align: left;
     width: 90%;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.25em;
     padding: 0 2.5%;
 }
 
@@ -94,16 +91,21 @@ main {
     width: 25%;
     padding: 0 2.5%;
     display: flex;
+    flex-direction: row;
 
 }
 
-/* .fadeElem img{
-    height: 600px;
-} */
+#aboutMeText {
+    font-size: 1.3rem;;
+}
+/* Стили знакомства с фотографом (END) */
 
+/* Преднастройка всплывающего контента */
 .fadeElem {
     padding-top: 40px;
 }
+/* Преднастройка всплывающего контента (END)*/
+
 
 /* Стили кнопок-ссылок */
 
@@ -114,9 +116,11 @@ main {
     height: 54px;
     width: 550px;
     margin: 50px 0;
+    opacity: 1;
+    transition: 500ms;
 }
 
-.aButton a {
+.aButton a, .aButton a:hover {
     color: white;
     text-decoration: none;
     font-size: 15px;
@@ -124,8 +128,8 @@ main {
 }
 
 .aButton:hover {
-    opacity: 0.9;
-    transition: opacity 400ms;
+    opacity: 0.85;
+    transition: 500ms;
 }
 
 a i{
@@ -139,16 +143,10 @@ a i{
 .label::after{
     content: "•    •    •";
 }
+/* Стили кнопок-ссылок (END)*/
+
 
 /* Стили блоков контента с фотографиями */
-h3 {
-    font-family: 'Cormorant Garamond', serif;
-    color: #000;
-    opacity: 0.7;
-    font-size: 2.2rem;
-    letter-spacing: 2px;
-}
-
 .photoContainer {
     margin: 20px 0;
     display: flex;
@@ -162,16 +160,19 @@ h3 {
     align-items: center;
     width: 100%;
     justify-content: center;
+    z-index: 1;
 }
 
 .photoBlock img{
     justify-content: center;
-    width: 20%;
+    width: 22%;
     padding: 10px;
+    z-index: 1001;
 }
+/* Стили блоков контента с фотографиями (END) */
+
 
 /* Стили блока с инстаграм - фото */
-
 #instaBlock {
     display: flex;
     flex-direction: row;
@@ -184,47 +185,35 @@ h3 {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    width: 70%;
 
+}
+
+#instaPhoto a{
+    width: 28%;
+    margin: 6px;
 }
 
 #instaPhoto img {
-    z-index: 1;
-    width: 250px;
-    height: auto;
-    margin: 10px;
+    width: 100%;
+    
 }
-
-.sh_photo {
-    position: relative;
-}
-
-.sh_photo img {
-    z-index: 1;
-}
-
-.shadow {
-    position: absolute;
-    top:0;
-    left:0;
-    z-index: 10;
-
-}
-
 
 #instaText {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: 30px;
+    margin-right: 15px;
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.5rem;
     color: #000;
     opacity: 0.7;
 }
- 
-/* Стили нижнего колонтитула */
+ /* Стили блока с инстаграм - фото (END)*/ 
 
+
+/* Стили нижнего колонтитула */
 footer {
     display: flex;
     flex-direction: column;
@@ -244,6 +233,14 @@ footer {
     width: 35px;
     height: 35px;
     margin: 10px;
+    opacity: 0.95;
+    transition: 500ms;
+}
+
+.footerLinks img:hover{
+    opacity: 1;
+    transform: scale(1.25, 1.25) ;
+    transition: 500ms;
 }
 
 #pixelPerfect {
@@ -264,3 +261,76 @@ footer {
     margin: 2px;
 }
 
+/* Стили нижнего колонтитула  (END)*/
+
+/* Медиа запрос для мобайла */
+@media screen and (max-width: 1024px){
+
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    #opener {
+        font-size: 1.25rem;
+    }
+
+    #aboutMeContainer {
+        text-align: center;
+        margin: 220px  auto 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+        justify-content: center;
+    }
+
+    #aboutMeText, h2 {
+        font-size: 160%;
+    }
+ 
+    #aboutMe {
+        flex-direction: column;
+    }
+
+    #aboutMeContainer img {
+        width: 65%;
+    }
+
+    .h2, h2, h3 a {
+        font-size: 3rem;
+    }
+
+    .photoBlock {
+        flex-direction: column;
+    }
+
+    .photoBlock img {
+        width: 75%;
+    }
+
+    .aButton {
+        height: 80px;
+    }
+
+    .aButton a, .aButton a:hover {
+        font-size: 22px;
+    }
+    
+    #instaBlock {
+            flex-direction: column-reverse;
+    }
+
+    #instaPhoto {
+        flex-direction: column;
+        width: 195%;
+    }
+
+    #instaText {
+        font-size: 2.25rem;
+    }
+
+    #footerText {
+        font-size: 1.25em;
+    }
+}
+/* Медиа запрос для мобайла (END) */

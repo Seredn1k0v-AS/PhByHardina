@@ -18,7 +18,7 @@
 }
 
 #opener h1{
-    font-family: 'Oswald', sans-serif;
+    
     margin: 0;
     font-size: 2em;
     letter-spacing: 3px;
@@ -140,10 +140,11 @@
     border: solid 1px white;
     border-radius: 12px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 1000;
     padding: 5px 15px;
     margin-top: 20px;
     opacity: 0;
+    background-color: white;
 }
 /* Убираем ненужные разделители ссылок */
 #dropDownContent a::after {
@@ -167,11 +168,12 @@
     border: solid 1px white;
     border-radius: 12px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 999;
     padding: 5px 15px;
     width: 220px;
     margin-top: 20px;
     opacity: 0;
+    background-color: white;
 }
 /* Убираем ненужные разделители ссылок */
 #dropDownContent_2 a::after {
@@ -195,9 +197,10 @@
     margin-top: 0;
 }
 
-
-
-/* 
-#glavnaya {
-    background-color: green;
-} */
+/* Медиа запрос для мобайла */
+@media screen and (max-width: 1024px){
+    #menu li a {
+        font-size: 2em;
+    }
+}
+/* Медиа запрос для мобайла (END) */
